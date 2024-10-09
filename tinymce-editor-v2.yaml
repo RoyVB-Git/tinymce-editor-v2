@@ -1,4 +1,4 @@
-enabled: false
+enabled: true
 restrictions:
   whitelist: false
   blacklist: false
