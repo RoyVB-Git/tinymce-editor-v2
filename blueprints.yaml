@@ -1,0 +1,134 @@
+name: TinyMCE Editor V2
+version: 2.0.0
+description: Updated version of plugin with latest TinyMCE
+icon: edit
+author:
+  name: RoyVB
+  url: https://github.com/RoyVB-Git/grav-plugin-tinymce-editor-v2
+homepage: https://github.com/RoyVB-Git/grav-plugin-tinymce-editor-v2
+keywords: tinymce, html, wysiwyg, editor, integration, plugin
+bugs: https://github.com/RoyVB-Git/grav-plugin-tinymce-editor-v2/issues
+docs: https://github.com/RoyVB-Git/grav-plugin-tinymce-editor-v2/README.md
+license: Integration plugin under the MIT License, TinyMCE under LGPL 2.1
+
+form:
+  validation: loose
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    restrictions:
+      type: checkboxes
+      label: PLUGIN_TINYMCE_EDITOR_V2.RESTRICTIONS
+      help: PLUGIN_TINYMCE_EDITOR_V2.RESTRICTIONS_HELP
+      default:
+        whitelist: false
+        blacklist: false
+      options:
+        whitelist: PLUGIN_TINYMCE_EDITOR_V2.WHITELIST
+        blacklist: PLUGIN_TINYMCE_EDITOR_V2.BLACKLIST
+      use: keys
+    whitelist:
+      type: textarea
+      yaml: true
+      label: PLUGIN_TINYMCE_EDITOR_V2.WHITELIST
+      help: PLUGIN_TINYMCE_EDITOR_V2.WHITELIST_HELP
+      validate:
+        type: yaml
+    blacklist:
+      type: textarea
+      yaml: true
+      label: PLUGIN_TINYMCE_EDITOR_V2.BLACKLIST
+      help: PLUGIN_TINYMCE_EDITOR_V2.BLACKLIST_HELP
+      validate:
+        type: yaml
+    apikey:
+      type: text
+      label: PLUGIN_TINYMCE_EDITOR_V2.API_KEY
+      help: PLUGIN_TINYMCE_EDITOR_V2.API_KEY_HELP
+    plugins:
+      type: selectize
+      label: PLUGIN_ADMIN.PLUGINS
+      help: PLUGIN_TINYMCE_EDITOR_V2.PLUGINS_HELP
+      classes: fancy
+      validate:
+        type: commalist
+    parameters:
+      name: parameters
+      type: list
+      style: vertical
+      collapsible: 0
+      label: PLUGIN_TINYMCE_EDITOR_V2.PARAMETERS
+      help: PLUGIN_TINYMCE_EDITOR_V2.PARAMETERS_HELP
+      fields:
+        .name:
+          type: text
+          label: PLUGIN_ADMIN.NAME
+        .value:
+          type: text
+          label: PLUGIN_TINYMCE_EDITOR_V2.VALUE
+    menubar:
+      type: toggle
+      label: PLUGIN_TINYMCE_EDITOR_V2.MENU_BAR
+      help: PLUGIN_TINYMCE_EDITOR_V2.MENU_BAR_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    menu:
+      name: menu
+      type: list
+      style: vertical
+      collapsible: 0
+      label: PLUGIN_ADMIN.MENU
+      help: PLUGIN_TINYMCE_EDITOR_V2.MENU_HELP
+      fields:
+        .title:
+          type: text
+          label: PLUGIN_ADMIN.TITLE
+        .items:
+          type: text
+          label: PLUGIN_ADMIN.ITEMS
+    toolbar:
+      name: toolbar
+      type: list
+      style: vertical
+      collapsible: 0
+      label: PLUGIN_TINYMCE_EDITOR_V2.TOOLBAR
+      help: PLUGIN_TINYMCE_EDITOR_V2.TOOLBAR_HELP
+      fields:
+        .row:
+          type: text
+          label: PLUGIN_TINYMCE_EDITOR_V2.ROW
+    branding:
+      type: toggle
+      label: PLUGIN_TINYMCE_EDITOR_V2.BRANDING
+      help: PLUGIN_TINYMCE_EDITOR_V2.BRANDING_HELP
+      highlight: 0
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    statusbar:
+      type: toggle
+      label: PLUGIN_TINYMCE_EDITOR_V2.STATUS_BAR
+      help: PLUGIN_TINYMCE_EDITOR_V2.STATUS_BAR_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
