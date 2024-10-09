@@ -4,11 +4,11 @@ description: Updated version of plugin with latest TinyMCE
 icon: edit
 author:
   name: RoyVB
-  url: https://github.com/RoyVB-Git/grav-plugin-tinymce-editor-v2
-homepage: https://github.com/RoyVB-Git/grav-plugin-tinymce-editor-v2
+  url: https://github.com/RoyVB-Git/tinymce-editor-v2
+homepage: https://github.com/RoyVB-Git/tinymce-editor-v2
 keywords: tinymce, html, wysiwyg, editor, integration, plugin
-bugs: https://github.com/RoyVB-Git/grav-plugin-tinymce-editor-v2/issues
-docs: https://github.com/RoyVB-Git/grav-plugin-tinymce-editor-v2/README.md
+bugs: https://github.com/RoyVB-Git/tinymce-editor-v2/issues
+docs: https://github.com/RoyVB-Git/tinymce-editor-v2/README.md
 license: Integration plugin under the MIT License, TinyMCE under LGPL 2.1
 
 form:
